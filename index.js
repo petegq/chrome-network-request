@@ -21,6 +21,7 @@ async function runApp() {
   // Set up a listener for network request events
   Network.requestWillBeSent((params) => {
     console.log(`Request: ${params.requestId} => ${params.request.url}`);
+    console.log(params.request);
   });
 
   // Open a new tab and navigate to the specified URL
